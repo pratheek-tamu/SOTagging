@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <p style="font-size: 20; text-align: center">
+      <b>Tags for the given question</b>
+    </p>
+    <div class="results">
+      {% for tag in prediction %}
+      <h2>{{ tag }}</h2>
+      {%endfor%}
+    </div>
+  </body>
+</html>
